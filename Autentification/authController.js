@@ -35,13 +35,7 @@ const Auth = {
             if (!isMatch) {
                 return res.status(401).json({ message: 'Mot de passe incorrect' });
             }
-            /*if (user && !isMatch){
-               const otp = OTP.generateOTP();
-               const email = req.body.email;
-               OTP.sendOTPemail(email,otp).then(() =>{
-                console.log("OTP envoyé à", email)
-               })
-            }*/
+            
     
             // Génération du token JWT
             const token = jwt.sign(
